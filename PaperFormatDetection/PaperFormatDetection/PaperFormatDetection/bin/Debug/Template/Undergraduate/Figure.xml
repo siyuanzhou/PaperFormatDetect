@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<FigureStyle>
+  <FigureCNName>
+    <justification>居中</justification>
+    <font>宋体</font>
+    <fontsize>五号</fontsize>
+	<CNFontToPicLns>1</CNFontToPicLns>
+	<MNtoName>2</MNtoName>
+  </FigureCNName>
+  
+
+  
+  
+  <PicJustification>居中</PicJustification>
+  <UpBlankToPicLns>1</UpBlankToPicLns>
+  <DownBlankToPicLns>2</DownBlankToPicLns>
+
+
+</FigureStyle>

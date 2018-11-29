@@ -1,0 +1,36 @@
+ body{
+  background-color: rgb(240,240,240);
+  font-family: "Arial","Microsoft YaHei","黑体","宋体",sans-serif;
+   }
+   #header{
+  margin: auto;
+  text-align: center;
+  font-size:23px;
+  font-family: "Arial","Microsoft YaHei","黑体","宋体",sans-serif;
+      margin-top:40px;
+   }
+  .login-wrapper{
+  width: 40%;
+  margin: auto;
+
+  }
+  form{
+    border-bottom:1px solid rgb(200,200,200);
+    padding-bottom: 30px;
+    margin-bottom:40px;
+  }
+  p{
+    text-align: center;
+  }
+  #queding{
+    margin-top:40px;
+  }
+  #image{
+    border-right:3px solid rgb(200,200,200);
+    padding-right:15px;
+    margin-right:15px;
+  }
+  #answer1,#answer2,#answer3,#username{
+    margin-bottom:30px;
+  }
+  

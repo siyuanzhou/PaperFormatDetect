@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?><paper>
+  <module detect="false" xqueryUse="false">
+    <className>CoverStyle</className>
+    <cnName>封面</cnName>
+    <rule>CoverStyle.config</rule>
+  </module>
+  <module detect="false" xqueryUse="false">
+    <className>Abstract</className>
+    <cnName>摘要</cnName>
+    <rule>Abstract.config</rule>
+  </module>
+  <module detect="false" xqueryUse="false">
+    <className>HeaderFooter</className>
+    <cnName>页眉页脚</cnName>
+    <rule>HeaderFooter.config</rule>
+  </module>
+  <module detect="false" xqueryUse="false">
+    <className>Contents</className>
+    <cnName>目录</cnName>
+    <rule>Contents.config</rule>
+  </module>
+  <module detect="false" xqueryUse="false">
+    <className>ParagraphStyle</className>
+    <cnName>正文</cnName>
+    <rule>Paragraph.config</rule>
+  </module>
+  <module detect="false" xqueryUse="false">
+    <className>FigureStyle</className>
+    <cnName>图</cnName>
+    <rule>Figure.config</rule>
+  </module>
+  <module detect="false" xqueryUse="false">
+    <className>TableStyle</className>
+    <cnName>表</cnName>
+    <rule>Table.config</rule>
+  </module>
+  <module detect="false" xqueryUse="false">
+    <className>References</className>
+    <cnName>参考文献</cnName>
+    <rule>References.config</rule>
+  </module>
+</paper>

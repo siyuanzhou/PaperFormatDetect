@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans
+	xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:aop="http://www.springframework.org/schema/aop"
+	xmlns:tx="http://www.springframework.org/schema/tx"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans 
+	http://www.springframework.org/schema/beans/spring-beans-2.5.xsd
+	http://www.springframework.org/schema/tx
+	http://www.springframework.org/schema/tx/spring-tx-2.5.xsd
+	http://www.springframework.org/schema/aop
+	http://www.springframework.org/schema/aop/spring-aop-2.5.xsd">
+<!-- 定义数据源bean，使用C3P0 -->
+<!-- 定义数据源bean,使用BasicDataSource -->
+ <bean id="dataSource" class="org.apache.commons.dbcp.BasicDataSource" destroy-method="close">
+  	<property name="driverClassName" value="com.microsoft.sqlserver.jdbc.SQLServerDriver"></property>
+  	<property name="url" value="jdbc:sqlserver://210.30.97.196:1433;databaseName=Test"></property>
+ 	 <property name="username" value="ra"></property>
+  	<property name="password" value="123456"></property>
+</bean>
+
+<!--  定义hibernate的SessionFatory--> 
+<bean  id="sessionFactory" class="org.springframework.orm.hibernate3.LocalSessionFactoryBean">
+  <property name="dataSource" ref="dataSource"></property>
+  <property name="mappingResources">
+    <list>
+    <!--   以下用来列出所有PO映射文件--> 
+      <value>red/ant/po/Student.hbm.xml</value>
+      <value>red/ant/po/Paper.hbm.xml</value>
+      <value>red/ant/po/Teacher.hbm.xml</value>
+      <value>red/ant/po/Advice.hbm.xml</value>
+    </list>
+  </property>
+  <property name="hibernateProperties">
+    <props>
+      <prop key="hibernate.dialect">org.hibernate.dialect.SQLServerDialect</prop>
+      <prop key="hibernate.hbm2ddl.auto">update</prop>
+    </props>
+  </property>
+</bean>
+
+<!-- 事务管理器bean -->
+<bean id="transactionManager" class="org.springframework.orm.hibernate3.HibernateTransactionManager">
+  <property name="sessionFactory" ref="sessionFactory"></property>
+</bean>
+
+<!-- 配置事务切面bean，为其制定事务管理器 -->
+<tx:advice id="txAdvice" transaction-manager="transactionManager">
+  <tx:attributes>
+     <tx:method name="get*" read-only="true"/>
+     <tx:method name="*"/>
+  </tx:attributes>
+</tx:advice>
+<!-- 配置一个切入点，匹配red.ant.service包下所有 以Impl结尾的类-->
+<aop:config>
+  <aop:pointcut id="pcut" expression="execution(* red.ant.service.impl.*Impl.*(..))"/>
+  <!-- 制定在pointcut切入点应用txAdvice事务切面 -->
+  <aop:advisor advice-ref="txAdvice" pointcut-ref="pcut"/>
+</aop:config>
+
+<!-- 定义DAO Bean -->
+
+<bean id="studentDao" class="red.ant.dao.impl.StudentDaoHibernate">
+<property name="sessionFactory" ref="sessionFactory"></property>
+</bean>
+<bean id="paperDao" class="red.ant.dao.impl.PaperDaoHibernate">
+<property name="sessionFactory" ref="sessionFactory"></property>
+</bean>
+<bean id="teacherDao" class="red.ant.dao.impl.TeacherDaoHibernate">
+<property name="sessionFactory" ref="sessionFactory"></property>
+</bean>
+<bean id="adviceDao" class="red.ant.dao.impl.AdviceDaoHibernate">
+<property name="sessionFactory" ref="sessionFactory"></property>
+</bean>
+<!-- 业务逻辑组件 -->
+
+<bean id="studentService" class="red.ant.service.impl.StudentServiceImpl">
+<property name="studentDao" ref="studentDao"></property>
+</bean>
+<bean id="paperService" class="red.ant.service.impl.PaperServiceImpl">
+<property name="paperDao" ref="paperDao"></property>
+</bean>
+
+<bean id="teacherService" class="red.ant.service.impl.TeacherServiceImpl">
+<property name="teacherDao" ref="teacherDao"></property>
+</bean>
+<bean id="adviceService" class="red.ant.service.impl.AdviceServiceImpl">
+<property name="adviceDao" ref="adviceDao"></property>
+</bean>
+<!-- Spring管理的Action实例 -->
+<bean id="loginAction" class="red.ant.action.LoginAction" scope="prototype">
+<property name="studentService" ref="studentService"></property>
+<property name="teacherService" ref="teacherService"></property>
+</bean>
+<bean id="logoutAction" class="red.ant.action.LogoutAction" scope="prototype">
+</bean>
+<bean id="updateAction" class="red.ant.action.UpdateAction" scope="prototype">
+<property name="studentService" ref="studentService"></property>
+<property name="teacherService" ref="teacherService"></property>
+</bean>
+<bean id="registerAction" class="red.ant.action.RegisterAction" scope="prototype">
+<property name="studentService" ref="studentService"></property>
+</bean>
+<bean id="personalAction" class="red.ant.action.PersonalAction" scope="prototype">
+<property name="studentService" ref="studentService"></property>
+</bean>
+<bean id="uploadAction" class="red.ant.action.UploadAction" scope="prototype">
+<property name="paperService" ref="paperService"></property>
+</bean>
+<bean id="historyAction" class="red.ant.action.HistoryAction" scope="prototype">
+<property name="paperService" ref="paperService"></property>
+</bean>
+<bean id="allHistoryAction" class="red.ant.action.AllHistoryAction" scope="prototype">
+<property name="paperService" ref="paperService"></property>
+</bean>
+<bean id="paperDeleteAction" class="red.ant.action.PaperDeleteAction" scope="prototype">
+<property name="paperService" ref="paperService"></property>
+</bean>
+<bean id="allHistoryFindAction" class="red.ant.action.AllHistoryFindAction" scope="prototype">
+<property name="paperService" ref="paperService"></property>
+<property name="studentService" ref="studentService"></property>
+</bean>
+<bean id="reportAction" class="red.ant.action.ReportAction" scope="prototype">
+<property name="paperService" ref="paperService"></property>
+</bean>
+<bean id="adviceAction" class="red.ant.action.AdviceAction" scope="prototype">
+<property name="adviceService" ref="adviceService"></property>
+<property name="studentService" ref="studentService"></property>
+</bean>
+<bean id="adviceshowAction" class="red.ant.action.AdviceshowAction" scope="prototype">
+<property name="adviceService" ref="adviceService"></property>
+</bean>
+<bean id="adviceshowFindAction" class="red.ant.action.AdviceshowFindAction" scope="prototype">
+<property name="adviceService" ref="adviceService"></property>
+</bean>
+<bean id="adviceDeleteAction" class="red.ant.action.AdviceDeleteAction" scope="prototype">
+<property name="adviceService" ref="adviceService"></property>
+</bean>
+<bean id="securityAction" class="red.ant.action.SecurityAction" scope="prototype">
+<property name="studentService" ref="studentService"></property>
+</bean>
+<bean id="passAction" class="red.ant.action.PassAction" scope="prototype">
+</bean>
+<bean id="resetAction" class="red.ant.action.ResetAction" scope="prototype">
+<property name="studentService" ref="studentService"></property>
+<property name="teacherService" ref="teacherService"></property>
+</bean>
+<bean id="resetPasswordAction" class="red.ant.action.ResetPasswordAction" scope="prototype">
+<property name="studentService" ref="studentService"></property>
+<property name="teacherService" ref="teacherService"></property>
+</bean>
+</beans>

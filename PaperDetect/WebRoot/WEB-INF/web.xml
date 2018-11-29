@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://java.sun.com/xml/ns/javaee" xmlns:web="http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd" version="2.5">
+  
+  <context-param>
+    <param-name>contextConfigLocation</param-name>
+    <param-value>classpath:applicationContext.xml</param-value>
+  </context-param>
+  <welcome-file-list>
+    <welcome-file>login.jsp</welcome-file>
+  </welcome-file-list>
+  
+  <!-- 未登录权限控制 -->
+  <filter>
+    <filter-name>intercept_page</filter-name>
+    <filter-class>red.ant.util.AuthorityFilter</filter-class>
+  </filter>
+  <filter-mapping>
+    <filter-name>intercept_page</filter-name>
+    <url-pattern>*.jsp</url-pattern>
+  </filter-mapping>
+  <!-- 老师权限控制 -->
+  <filter>
+    <filter-name>intercept_pageTeacher</filter-name>
+    <filter-class>red.ant.util.TeacherAuthorityFilter</filter-class>
+  </filter>
+  <filter-mapping>
+    <filter-name>intercept_pageTeacher</filter-name>
+    <url-pattern>*.jsp</url-pattern>
+  </filter-mapping>
+  
+ <!-- 学生权限控制 -->
+  <filter>
+    <filter-name>intercept_pageStudent</filter-name>
+    <filter-class>red.ant.util.StudentAuthorityFilter</filter-class>
+  </filter>
+  <filter-mapping>
+    <filter-name>intercept_pageStudent</filter-name>
+    <url-pattern>*.jsp</url-pattern>
+  </filter-mapping>
+  <!-- 重定向控制 -->
+  <!--  
+  <filter>
+    <filter-name>intercept_pageRefoward</filter-name>
+    <filter-class>red.ant.util.RefowardAuthorityFilter</filter-class>
+  </filter>
+  <filter-mapping>
+    <filter-name>intercept_pageRefoward</filter-name>
+    <url-pattern>*.jsp</url-pattern>
+  </filter-mapping>
+  -->
+  <filter>
+    <filter-name>struts2</filter-name>
+    <filter-class>org.apache.struts2.dispatcher.ng.filter.StrutsPrepareAndExecuteFilter</filter-class>
+  </filter>
+  <filter-mapping>
+    <filter-name>struts2</filter-name>
+    <url-pattern>/*</url-pattern>
+  </filter-mapping>
+  <listener>
+    <listener-class>org.springframework.web.context.ContextLoaderListener</listener-class>
+  </listener>
+   <!-- 设置Session的有效时间:以分钟为单位-->
+   <!--  
+    <session-config>
+       <session-timeout>15</session-timeout>
+    </session-config>
+    -->
+</web-app>

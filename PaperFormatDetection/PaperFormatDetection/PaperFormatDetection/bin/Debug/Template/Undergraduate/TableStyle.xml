@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<TableStyle>
+  <TableName>
+    <justification>居中</justification>
+    <font>宋体</font>
+    <fontsize>五号</fontsize>
+	<spacelnTotableUp>1</spacelnTotableUp>
+	<MNtoName>2</MNtoName>
+  </TableName>
+  
+
+  
+  <InTable>
+    <justification>居中</justification>
+    <font>宋体</font>
+	<enfont>宋体</enfont>
+    <fontsize>五号</fontsize>
+  </InTable>
+
+</TableStyle>

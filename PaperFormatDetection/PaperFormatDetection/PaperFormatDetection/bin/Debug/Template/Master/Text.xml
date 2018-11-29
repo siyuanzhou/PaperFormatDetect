@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<Text>
+    <tTitle>
+    	<onelevel>
+			<font>黑体</font>
+			<fontsize>小三</fontsize>
+			<justification>居左</justification>
+			<linebefore>0</linebefore>
+			<lineafter>240</lineafter>
+			<linebetween>360</linebetween>
+			<bold>false</bold>
+		</onelevel>
+		<twolevel>
+			<font>黑体</font>
+			<fontsize>四号</fontsize>
+			<justification>居左</justification>
+			<linebefore>120</linebefore>
+			<lineafter>0</lineafter>
+			<linebetween>360</linebetween>
+			<bold>false</bold>
+		</twolevel>
+		<threelevel>
+			<font>黑体</font>
+			<fontsize>小四</fontsize>
+			<justification>居左</justification>
+			<linebefore>120</linebefore>
+			<lineafter>0</lineafter>
+			<linebetween>360</linebetween>
+			<bold>false</bold>
+		</threelevel>
+	</tTitle>
+	<tText>
+		<indentation>2</indentation>
+		<font>宋体</font>
+		<fontsize>小四</fontsize>
+		<justification>两端对齐</justification>
+		<linebefore>0</linebefore>
+		<lineafter>0</lineafter>
+		<linebetween>300</linebetween>
+		<bold>false</bold>
+	</tText>
+</Text>
+

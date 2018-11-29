@@ -1,0 +1,17 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+        "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+        "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping package="red.ant.po">
+<class name="Paper" table="paper">
+<id name="pid" column="pID"> 
+<generator class="assigned"></generator>
+</id>
+<property name="paper_id" column="paper_id"></property>
+<property name="paper_path" column="paper_path"></property>
+<property name="ptime" column="ptime"></property>
+<property name="name" column="name"></property>
+<property name="sid" column="sID"></property>
+</class>
+</hibernate-mapping>

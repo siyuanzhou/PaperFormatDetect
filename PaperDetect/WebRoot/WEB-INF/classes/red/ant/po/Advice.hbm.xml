@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+        "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+        "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping package="red.ant.po">
+<class name="Advice" table="advice">
+<id name="aid" column="aID"> 
+<generator class="assigned"></generator>
+</id>
+<property name="sid" column="sID"></property>
+<property name="advice" column="advice"></property>
+<property name="email" column="email"></property>
+<property name="name" column="name"></property>
+</class>
+</hibernate-mapping>

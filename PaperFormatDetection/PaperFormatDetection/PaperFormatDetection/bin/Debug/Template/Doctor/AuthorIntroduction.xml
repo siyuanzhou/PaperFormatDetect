@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<Root>
+	<AuthorIntroduction>
+	  <Title>
+	    <necessary>true</necessary>
+		<spacenum>0</spacenum>
+		<justification>居中</justification>
+		<linebetween>360</linebetween>
+		<linebefore>0</linebefore>
+		<lineafter>0</lineafter>
+		<font>黑体</font>
+		<fontsize>小三</fontsize>
+		<bold>true</bold>
+	  </Title>
+	  <Text>
+		<indentation>2</indentation>
+		<linebetween>300</linebetween>
+		<linebefore>0</linebefore>
+		<lineafter>0</lineafter>
+		<font>宋体</font>
+		<fontsize>小四</fontsize>
+	  </Text>
+	</AuthorIntroduction>
+</Root>

@@ -1,0 +1,122 @@
+  body{
+    font-family: "Arial","Microsoft YaHei","黑体","宋体",sans-serif;
+  }
+  #header{
+    width:80%;
+    margin:auto;
+    height:40px;
+    margin-top:30px;
+    margin-bottom: 30px;
+   }
+  #header img{
+  border-right:2px solid rgb(200,200,200);
+  height: 40px;
+  float: left;
+  cursor: pointer;
+  padding-right:20px;
+  margin-right:20px;
+   }
+  #header span{
+    font-size: 20px;
+    line-height: 40px;
+   }
+  #header a{
+    text-decoration: none;
+    cursor:pointer;
+    line-height: 40px;
+   }
+  #subheader{
+    background-color: rgb(95,143,193);
+    height:40px;
+    width:100%;
+    margin-bottom: 20px;
+    border-radius: 5px;
+    line-height: 40px;
+    border:1px solid rgb(240,240,240);
+    color: white;
+   }
+  #container{
+    width:80%;
+    margin:auto;
+    min-height: 460px;
+    border:1px solid rgb(240,240,240);
+    border-radius: 5px;
+  }
+  #upload{
+    margin-top:60px;
+    margin-left:15%;
+    width:70%;
+  }
+  #ziliao{
+    width:50%;
+    margin: auto;
+    margin-top:60px;
+
+  }
+  #ziliao div{
+    margin-top:20px;
+    font-size:18px;
+  }
+  #ziliao div span{
+    width:200px;
+    margin-right:30px;
+    float: left;
+  }
+  #collapseExample{
+    width:70%;
+    margin-left:25%;
+  }
+  .well div{
+    margin-bottom: 20px;
+    height:30px;
+    line-height: 30px;
+  }
+  .well div span{
+    width: 100px;
+    font-size:18px;
+  }
+  #history{
+    width:90%;
+    margin: auto;
+    font-size:18px;
+    margin-top:20px;
+  }
+  #history table th{
+    text-align: center;
+    font-weight: bold;
+  }
+  #history table td{
+    text-align: center;
+    vertical-align: middle;
+  }
+  #report{
+    margin: auto;
+    font-size:18px;
+    margin-top: 20px;
+  }
+  #report p{
+    margin-top: 5px;
+    margin-bottom: 5px;
+  }
+  #explanation{
+  	width:45%;
+  	height:320px;
+  	float: right;
+  	border: 1px solid rgb(200,200,200);
+    margin-top:20px;
+  	/*overflow: scroll;*/
+    margin-right:30px;
+    padding: 0px;
+  }
+  .foot{
+  width: 60%;
+  margin-left: 20%;
+	text-align: center;
+	height:50px;
+	margin-top:50px;
+	bottom: 0;
+	border-top:1px solid black;
+}
+#pwd1,#pwd2,#pwd3{
+	border:1px solid rgb(200,200,200);
+}

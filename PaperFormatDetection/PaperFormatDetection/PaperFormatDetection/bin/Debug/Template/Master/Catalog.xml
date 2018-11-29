@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<Root>
+	<Catalog>
+	  <Title>
+	    <necessary>true</necessary>
+		<space>4</space>
+		<justification>居中</justification>
+		<linebetween>300</linebetween>
+		<linebefore>0</linebefore>
+		<lineafter>0</lineafter>
+		<CNfont>黑体</CNfont>
+		<ENfont>Times New Roman</ENfont>
+		<fontsize>小三</fontsize>
+		<bold>false</bold>
+	  </Title>
+	  
+	  <Text>
+		<justification>两端对齐</justification>
+		<linebetween>300</linebetween>
+		<linebefore>0</linebefore>
+		<lineafter>0</lineafter>
+		<CNfont>宋体</CNfont>
+		<ENfont>Times New Roman</ENfont>
+		<fontsize>小四</fontsize>
+	  </Text>
+	</Catalog>
+</Root>

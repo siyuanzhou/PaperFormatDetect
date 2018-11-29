@@ -1,0 +1,13 @@
+C:\Users\Administrator\Desktop\PaperFormatDetection\PaperFormatDetection\bin\Release\PaperFormatDetection.exe.config
+C:\Users\Administrator\Desktop\PaperFormatDetection\PaperFormatDetection\bin\Release\PaperFormatDetection.exe
+C:\Users\Administrator\Desktop\PaperFormatDetection\PaperFormatDetection\bin\Release\PaperFormatDetection.pdb
+C:\Users\Administrator\Desktop\PaperFormatDetection\PaperFormatDetection\bin\Release\DocumentFormat.OpenXml.dll
+C:\Users\Administrator\Desktop\PaperFormatDetection\PaperFormatDetection\bin\Release\saxon9.dll
+C:\Users\Administrator\Desktop\PaperFormatDetection\PaperFormatDetection\bin\Release\saxon9api.dll
+C:\Users\Administrator\Desktop\PaperFormatDetection\PaperFormatDetection\bin\Release\IKVM.Runtime.dll
+C:\Users\Administrator\Desktop\PaperFormatDetection\PaperFormatDetection\bin\Release\IKVM.OpenJDK.ClassLibrary.dll
+C:\Users\Administrator\Desktop\PaperFormatDetection\PaperFormatDetection\bin\Release\DocumentFormat.OpenXml.xml
+C:\Users\Administrator\Desktop\PaperFormatDetection\PaperFormatDetection\bin\Release\saxon9api.netmodule
+C:\Users\Administrator\Desktop\PaperFormatDetection\PaperFormatDetection\obj\Release\PaperFormatDetection.exe
+C:\Users\Administrator\Desktop\PaperFormatDetection\PaperFormatDetection\obj\Release\PaperFormatDetection.pdb
+C:\Users\Administrator\Desktop\PaperFormatDetection\PaperFormatDetection\obj\Release\PaperFormatDetection.csprojResolveAssemblyReference.cache

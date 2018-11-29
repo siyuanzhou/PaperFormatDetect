@@ -1,0 +1,58 @@
+body {
+  background-color: rgb(240, 240, 240);
+  font-family: "Arial", "Microsoft YaHei", "黑体", "宋体", sans-serif;
+}
+
+#header {
+  margin: auto;
+  text-align: center;
+  font-size: 23px;
+  font-family: "Arial", "Microsoft YaHei", "黑体", "宋体", sans-serif;
+  margin-top: 40px;
+}
+
+.login-wrapper {
+  width: 40%;
+  margin: auto;
+}
+
+form {
+  border-bottom: 1px solid rgb(200, 200, 200);
+  padding-bottom: 30px;
+  margin-bottom: 20px;
+}
+
+#zhuce {
+  background-color: rgb(240, 240, 240);
+  border: 1px solid rgb(200, 200, 200);
+  width: 80px;
+  margin-top: -6px;
+  float: right;
+}
+
+#zhuce:hover {
+  background-color: rgb(200, 200, 200);
+}
+
+p {
+  text-align: center
+}
+
+#denglu {
+  margin-top: 20px;
+}
+
+#image {
+  border-right: 3px solid rgb(200, 200, 200);
+  padding-right: 15px;
+  margin-right: 15px;
+}
+
+#lala {
+  width: 100%;
+}
+
+#lala a {
+  margin-top: 10px;
+  text-decoration: none;
+}

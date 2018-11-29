@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+    "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+    "http://struts.apache.org/dtds/struts-2.0.dtd">
+
+<struts>
+<!-- struts.devMode也就是struts的开发模式，默认值为false，改为true就是以后一旦就改这个文件中的配置就不用去重启tomcat -->
+    <constant name="struts.devMode" value="true" />
+    <!-- 最大上传大小 1G左右-->
+    <constant name="struts.multipart.maxSize" value="1048576000"/> 
+    <!-- 上传类型错误时的自定义显示 --> 
+    <constant name="struts.custom.i18n.resources" value="struts" />
+    <!-- extends="struts-default"就是继承struts-default.xml，它里面定义了许多跳转类型、拦截器等一些常用的东西 -->
+    <package name="main" extends="struts-default">
+     	<!-- 注册action -->
+        <action name="register" class="registerAction" method="myexecute">
+           <interceptor-ref name="defaultStack"></interceptor-ref> 
+        </action>
+        	<!-- 登录action -->
+        <action name="login" class="loginAction" method="myexecute">
+      	  <interceptor-ref name="defaultStack"></interceptor-ref> 
+        </action>
+        	<!-- 密码更新action -->
+        <action name="update" class="updateAction" method="myexecute" ></action>
+        	<!-- 注销action -->
+        <action name="logout" class="logoutAction"  ></action>
+         	<!-- 验证用户密码是否是纯数字和字母的组合 -->
+        <action name="pass" class="passAction" method="myexecute" ></action>
+        	<!-- 个人中心action -->
+        <action name="personal" class="personalAction" method="myexecute" ></action>
+        	<!-- 设置密保action -->
+        <action name="setSecurity" class="securityAction" method="addexecute"></action>
+        	<!-- 验证用户是否存在action -->
+        <action name="isExist" class="securityAction" method="IsExistexecute"></action>
+       		 <!-- 验证密保 action-->
+        <action name="forget" class="securityAction" method="forgetexecute"></action>
+             <!-- 根据pid查看检测报告action -->
+		<action name="report" class="reportAction" method="myexecute" ></action>
+        	 <!-- 查看本用户上传的最新检测报告action -->
+        <action name="report_new" class="reportAction" method="myexecute2" ></action>
+            <!-- 删除论文action -->
+         <action name="paperDelete" class="paperDeleteAction">
+			<result name="success">/teacher.jsp</result></action>
+       		 <!-- 用户填写反馈意见action -->
+        <action name="advice" class="adviceAction" method="myexecute"></action>
+         	 <!-- 教师删除反馈意见action -->
+        <action name="adviceDelete" class="adviceDeleteAction">
+        <result name="success">/teacher.jsp</result></action>
+       		  <!-- 进度条反馈值，是否检测完成action -->
+        <action name="deadline" class="uploadAction" method="myexecute" ></action>
+        	  <!-- 目前已经检测的论文数量 -->
+        <action name="sum" class="uploadAction" method="sumPaper" ></action>
+        	 <!-- 发送验证码到邮箱action -->
+        <action name="reset" class="resetAction" method="myexecute" ></action>
+        	 <!-- 邮箱重置密码的action -->
+        <action name="resetPassword" class="resetPasswordAction" method="myexecute" ></action>
+         <action name="uploadTemp" class="uploadAction" method="myexecute2" ></action>
+		<action name="upload" class="uploadAction" method="execute" >
+            <!-- 配置fileUpload拦截器 -->  
+            <interceptor-ref name="fileUpload">  
+                <!-- 配置允许上传的文件类型-->  
+                <!-- 不起作用，why？ -->
+               <param name="allowedExtensions">docx,doc</param>
+            <!-- 配置逻辑视图和实际资源的对应关系 -->  
+           </interceptor-ref>  
+             <interceptor-ref name="defaultStack"></interceptor-ref>  
+             <!-- 配置上传文件的保存的相对路径，tomcat安装路径中项目名称之下 --> 
+             <!--   <param name="savePath">\paperFolder</param> -->
+             <!--   <param name="savePath">"${savePath}"</param> -->
+            <!-- 不起作用，不跳转 --> 
+               <result name="success">/students.jsp</result>  
+        </action>  
+        
+         <action name="download" class="red.ant.action.DownloadAction">  
+           <result name="success" type="stream">  <!--type 为 stream 应用 StreamResult 处理--> 
+               <param name="contentType">text/plain</param>  
+                <!-- 默认为 inline(在线打开)，设置为 attachment 将会告诉浏览器下载该文件，filename 指定下载文        
+               	件保有存时的文件名，若未指定将会是以浏览的页面名作为文件名，如以 download.action 作为文件名，        
+               	这里使用的是动态文件名，${fileName}, 它将通过 Action 的 getFileName() 获得文件名 -->
+               <param name="contentDisposition">attachment;fileName="${fileName}"</param> 
+                
+                 <!-- 默认就是 inputStream，它将会指示 StreamResult 通过 inputName 属性值的 getter 方法，        
+               	比如这里就是 getDownloadFile() 来获取下载文件的内容，意味着你的 Action 要有这个方法 -->   
+               <param name="inputName">downloadFile</param>  
+               
+               <param name="bufferSize">1024</param>  <!-- 输出时缓冲区的大小 -->  
+           </result>  
+       </action>  
+       </package>
+       <!-- json包处理action -->
+       <package name="json" extends="json-default">
+       		<action name="history" class="historyAction">  
+        		    <result type="json">  
+           		     <param name="root">historyList</param>  
+         		   </result>  
+      		 </action>
+      		 <action name="allHistory" class="allHistoryAction">  
+        		    <result type="json">  
+           		     <param name="root">jsonList</param>  
+         		   </result>  
+      		 </action>
+      		  <action name="allHistoryFind" class="allHistoryFindAction">  
+        		    <result type="json">  
+           		     <param name="root">jsonList</param>  
+         		   </result>  
+      		 </action>
+      		 <action name="adviceshow" class="adviceshowAction">  
+        		    <result type="json">  
+           		     <param name="root">adviceList</param>  
+         		   </result>  
+      		 </action>
+      		  <action name="adviceshowFind" class="adviceshowFindAction">  
+        		    <result type="json">  
+           		     <param name="root">adviceList</param>  
+         		   </result>  
+      		 </action>
+      	</package>
+</struts>

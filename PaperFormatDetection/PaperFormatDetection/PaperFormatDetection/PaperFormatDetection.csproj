@@ -1,0 +1,150 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{06F129BE-70FB-4AC2-AEC7-26C3834B7875}</ProjectGuid>
+    <OutputType>Exe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>PaperFormatDetection</RootNamespace>
+    <AssemblyName>PaperFormatDetection</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <UseVSHostingProcess>true</UseVSHostingProcess>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="DocumentFormat.OpenXml, Version=2.5.5631.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Debug\DocumentFormat.OpenXml.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Office.Interop.Word, Version=14.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <EmbedInteropTypes>False</EmbedInteropTypes>
+      <HintPath>C:\Windows\assembly\GAC_MSIL\Microsoft.Office.Interop.Word\15.0.0.0__71e9bce111e9429c\Microsoft.Office.Interop.Word.dll</HintPath>
+    </Reference>
+    <Reference Include="saxon9, Version=9.1.0.8, Culture=neutral, PublicKeyToken=e1fdd002d5083fe6">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Debug\saxon9.dll</HintPath>
+    </Reference>
+    <Reference Include="saxon9api, Version=9.1.0.8, Culture=neutral, PublicKeyToken=e1fdd002d5083fe6, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Debug\saxon9api.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+    <Reference Include="WindowsBase" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Doctor\Abstract.cs" />
+    <Compile Include="Doctor\Achievements.cs" />
+    <Compile Include="Doctor\Appendix.cs" />
+    <Compile Include="Doctor\AuthorIntroduction.cs" />
+    <Compile Include="Doctor\Catalog.cs" />
+    <Compile Include="Doctor\ChartCatalog.cs" />
+    <Compile Include="Doctor\CopyrightAndOriginstmt.cs" />
+    <Compile Include="Doctor\CoverStyle.cs" />
+    <Compile Include="Doctor\Figure.cs" />
+    <Compile Include="Doctor\Formula.cs" />
+    <Compile Include="Doctor\HeaderFooter.cs" />
+    <Compile Include="Doctor\PaperDetection.cs" />
+    <Compile Include="Doctor\ConclusionAndThanks.cs" />
+    <Compile Include="Doctor\Punctuation.cs" />
+    <Compile Include="Doctor\Reference.cs" />
+    <Compile Include="Doctor\TableStyle.cs" />
+    <Compile Include="Master\Achievements.cs" />
+    <Compile Include="Master\Appendix.cs" />
+    <Compile Include="Master\Catalog.cs" />
+    <Compile Include="Master\Copyright.cs" />
+    <Compile Include="Master\Text.cs" />
+    <Compile Include="Master\ConclusionAndThanks.cs" />
+    <Compile Include="Master\Originstmt.cs" />
+    <Compile Include="Master\CoverStyle.cs" />
+    <Compile Include="Master\Figure.cs" />
+    <Compile Include="Master\Formula.cs" />
+    <Compile Include="Master\HeaderFooter.cs" />
+    <Compile Include="Master\Punctuation.cs" />
+    <Compile Include="Master\Reference.cs" />
+    <Compile Include="Master\TableStyle.cs" />
+    <Compile Include="Paperbase\Abstract.cs" />
+    <Compile Include="Paperbase\Appendix.cs" />
+    <Compile Include="Paperbase\Catalog.cs" />
+    <Compile Include="Paperbase\ChartCatalog.cs" />
+    <Compile Include="Paperbase\headerfooters.cs" />
+    <Compile Include="Paperbase\Text.cs" />
+    <Compile Include="Paperbase\ConclusionAndThanks.cs" />
+    <Compile Include="Paperbase\Achievements.cs" />
+    <Compile Include="Paperbase\CopyrightAndOriginstmt.cs" />
+    <Compile Include="Paperbase\CoverStyle.cs" />
+    <Compile Include="Paperbase\Figure.cs" />
+    <Compile Include="Paperbase\Formula.cs" />
+    <Compile Include="Paperbase\HeaderFooter.cs" />
+    <Compile Include="Paperbase\Punctuation.cs" />
+    <Compile Include="Paperbase\Reference.cs" />
+    <Compile Include="Paperbase\TableStyle.cs" />
+    <Compile Include="Tools\ErrorReport.cs" />
+    <Compile Include="Tools\MSWord.cs" />
+    <Compile Include="Tools\PageLocator.cs" />
+    <Compile Include="Tools\Tool.cs" />
+    <Compile Include="Undergraduate\Abstract.cs" />
+    <Compile Include="Master\Abstract.cs" />
+    <Compile Include="Master\PaperDetection.cs" />
+    <Compile Include="Undergraduate\Appendix.cs" />
+    <Compile Include="Undergraduate\Catalog.cs" />
+    <Compile Include="Undergraduate\ConclusionAndThanks.cs" />
+    <Compile Include="Undergraduate\CoverStyle.cs" />
+    <Compile Include="Undergraduate\Figure.cs" />
+    <Compile Include="Undergraduate\Formula.cs" />
+    <Compile Include="Undergraduate\HeaderFooter.cs" />
+    <Compile Include="Undergraduate\PaperDetection.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Tools\Util.cs" />
+    <Compile Include="Undergraduate\Punctuation.cs" />
+    <Compile Include="Undergraduate\Reference.cs" />
+    <Compile Include="Undergraduate\TableStyle.cs" />
+    <Compile Include="Undergraduate\Text.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <COMReference Include="stdole">
+      <Guid>{00020430-0000-0000-C000-000000000046}</Guid>
+      <VersionMajor>2</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

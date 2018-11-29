@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+        "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+        "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping package="red.ant.po">
+<class name="Student" table="student">
+<id name="username" column="sID"> 
+<generator class="assigned"></generator>
+</id>
+<property name="sex" column="sex"></property>
+<property name="password" column="password"></property>
+<property name="name" column="name"></property>
+<property name="grade" column="class"></property>
+<property name="answer1" column="answer1"></property>
+<property name="answer2" column="answer2"></property>
+<property name="answer3" column="answer3"></property>
+<property name="email"  column="email"></property>
+<property name="identity"  column="identify"></property>
+</class>
+</hibernate-mapping>

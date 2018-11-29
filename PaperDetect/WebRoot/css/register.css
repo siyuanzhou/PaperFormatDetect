@@ -1,0 +1,53 @@
+body{
+  background-color: rgb(240,240,240);
+  font-family: "Arial","Microsoft YaHei","黑体","宋体",sans-serif;
+
+   }
+   #header{
+  margin: auto;
+  text-align: center;
+  font-size:23px;
+  font-family: "Arial","Microsoft YaHei","黑体","宋体",sans-serif;
+      margin-top:40px;
+   }
+  .login-wrapper{
+  width: 40%;
+  margin: auto;
+
+  }
+  form{
+    border-bottom:1px solid rgb(200,200,200);
+    padding-bottom: 30px;
+    margin-bottom:20px;
+  }
+  #denglu{
+    background-color: rgb(240,240,240);
+    border:1px solid rgb(200,200,200);
+    width:80px;
+    margin-top: -6px;
+    float:right;
+  }
+  #denglu:hover{
+    background-color:rgb(200,200,200);
+  }
+  p{
+    text-align: center
+  }
+  #zhuce{
+    margin-top:20px;
+  }
+  #image{
+    border-right:3px solid rgb(200,200,200);
+    margin-right:15px;
+    padding-right: 15px;
+  }
+  #sex div{
+    float:left;
+    margin-right:20%;
+    height:33px;
+    line-height: 33px;
+    margin-bottom: 10px;
+  }
+  a{
+    text-decoration: none;
+  }

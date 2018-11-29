@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<HeaderFooter>
+  <Header>
+    <headerJustification>居中</headerJustification>
+    <CNheaderFonts>宋体</CNheaderFonts>
+    <headerFontsize>五号</headerFontsize>	
+  </Header>
+  
+   <Footer>
+    <footerJustification>居中</footerJustification>
+    <CNFooterFonts>宋体</CNFooterFonts>
+    <footerFontsize>小五</footerFontsize>
+  </Footer>
+  
+  <indexOfChineseTitleOfDocx>2</indexOfChineseTitleOfDocx>
+  
+</HeaderFooter>

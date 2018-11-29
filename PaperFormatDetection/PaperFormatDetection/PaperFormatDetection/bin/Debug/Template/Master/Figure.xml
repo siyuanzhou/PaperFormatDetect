@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<FigureStyle>
+  <FigureCNName>
+    <justification>居中</justification>
+    <font>宋体</font>
+    <fontsize>五号</fontsize>
+	<CNFontToPicLns>1</CNFontToPicLns>
+	<MNtoName>2</MNtoName>
+  </FigureCNName>
+  
+   <FigureENName>
+    <justification>居中</justification>
+    <font>Times New Roman</font>
+    <fontsize>五号</fontsize>
+	<ENFontToCNFont>1</ENFontToCNFont>
+  </FigureENName>
+  
+  
+  <PicJustification>居中</PicJustification>
+  <UpBlankToPicLns>1</UpBlankToPicLns>
+  <DownBlankToPicLns>3</DownBlankToPicLns>
+
+
+</FigureStyle>

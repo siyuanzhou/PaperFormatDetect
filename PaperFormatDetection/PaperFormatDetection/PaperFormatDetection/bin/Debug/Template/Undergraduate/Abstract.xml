@@ -1,0 +1,56 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<Root>
+	<Abstract>
+          <Title>
+             <necessary>true</necessary>
+		<space>4</space>
+		<justification>居中</justification>
+		<linebetween>360</linebetween>
+		<linebefore>0</linebefore>
+		<lineafter>240</lineafter>
+		<font>黑体</font>
+		<fontsize>小三</fontsize>
+                <bold>false</bold>
+	  </Title>
+           <Text>
+		<indentation>2</indentation>
+		<linebetween>300</linebetween>
+		<linebefore>0</linebefore>
+		<lineafter>0</lineafter>
+		<font>宋体</font>
+		<fontsize>小四</fontsize>
+                <bold>false</bold>
+	  </Text>
+          <keyword>
+		<font>黑体</font>
+		<fontsize>小四</fontsize>        
+	  </keyword>
+          <TitleE>
+            <necessary>true</necessary>
+            <space>8</space>
+		<justification>居中</justification>
+		<linebetween>360</linebetween>
+		<linebefore>0</linebefore>
+		<lineafter>240</lineafter>
+		<font>Times New Roman</font>
+		<fontsize>小三</fontsize>
+                 <bold>false</bold>
+		<justification>两端对齐</justification>
+	  </TitleE>
+           <TextE>
+		<indentation>2</indentation>
+		<linebetween>300</linebetween>
+		<linebefore>0</linebefore>
+		<lineafter>0</lineafter>
+		<font>Times New Roman</font>
+		<fontsize>小四</fontsize>
+                <bold>false</bold>
+                <font>Cambria</font>
+                <font>Calibri</font>
+	  </TextE>
+           <keywordE>
+		<font>Times New Roman</font>
+		<fontsize>小四</fontsize>
+	  </keywordE>
+        </Abstract>
+</Root>

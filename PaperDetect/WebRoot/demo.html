@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>demo</title>
+	<script type="text/javascript" src="js/jquery-1.12.4.min.js"></script>
+</head>
+<body>
+	<button id="www"><h2 id="dd">加油！</h2></button>
+</body>
+<script type="text/javascript">
+console.log("Hello World");
+    function load()
+    {
+    	document.location.reload();
+    }
+    $(document).ready(function() {
+    	alert("刷新一下");
+    	time=setInterval(load,5000);
+    });
+	$('#www').click(function(event) {
+		/* Act on the event */
+		$("#dd").html("想办法，去学习！！！");
+		clearInterval(time);
+
+	});
+</script>
+</html>

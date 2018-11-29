@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project-module
+  type="WEB"
+  name="PaperDetect"
+  id="myeclipse.1460875703464"
+  context-root="/PaperDetect"
+  j2ee-spec="5.0"
+  archive="PaperDetect.war">
+  <attributes>
+    <attribute name="webrootdir" value="WebRoot" />
+  </attributes>
+</project-module>
+

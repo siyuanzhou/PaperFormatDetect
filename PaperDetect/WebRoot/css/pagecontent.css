@@ -1,0 +1,28 @@
+@media (min-width:768px) {
+  .pagecontent {
+    width: 1300px;
+    margin:auto;
+  }
+}
+@media (min-width:992px) {
+  .pagecontent {
+    width: 1300px;
+    margin:auto;
+  }
+}
+@media (min-width:1200px) {
+  .pagecontent {
+    width: 1300px;
+    margin:auto;
+  }
+}
+@media (max-width:767px) {
+  .pagecontent {
+    width: 1300px;
+    margin:auto;
+  }
+}
+
+.set-dialog .modal-dialog {
+  margin-top:  300px;
+}

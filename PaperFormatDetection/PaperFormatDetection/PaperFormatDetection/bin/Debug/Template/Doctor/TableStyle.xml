@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<TableStyle>
+  <TableName>
+    <justification>居中</justification>
+    <font>宋体</font>
+    <fontsize>小四</fontsize>
+	<spacelnTotableUp>2</spacelnTotableUp>
+	<MNtoName>2</MNtoName>
+  </TableName>
+  
+   <EnglishTableName>
+    <justification>居中</justification>
+    <font>Times New Roman</font>
+    <fontsize>小四</fontsize>
+	<spacelnTotableUp>1</spacelnTotableUp>
+  </EnglishTableName>
+  
+  <InTable>
+    <justification>居中</justification>
+    <font>宋体</font>
+	<enfont>宋体</enfont>
+    <fontsize>五号</fontsize>
+  </InTable>
+
+</TableStyle>
